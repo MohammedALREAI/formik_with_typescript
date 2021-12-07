@@ -1,0 +1,42 @@
+{
+    "rules": {
+      "@typescript-eslint/ban-ts-ignore": ["off"],
+      "@typescript-eslint/camelcase": ["off"],
+      "@typescript-eslint/interface-name-prefix": ["off"],
+      "@typescript-eslint/no-unused-expressions": ["off"],
+      "@typescript-eslint/no-var-requires": ["off"],
+      "comma-dangle": ["error", "always-multiline"],
+      "no-unused-vars": "off",
+      "@typescript-eslint/ban-types": "off",
+      "no-multiple-empty-lines": [2, {"max": 99999, "maxEOF": 0}],
+      "space-infix-ops": "off",
+      "@typescript-eslint/space-infix-ops": ["error", { "int32Hint": false }],
+      "no-empty-function": "off",
+      "no-async-promise-executor": ["off"],
+      "no-empty-pattern": ["off"],
+      "no-use-before-define": "off",
+      "@typescript-eslint/explicit-module-boundary-types": "off",
+      "object-curly-spacing": ["error", "always"],
+      "spaced-comment": ["off"],
+      "space-before-function-paren": ["off"],
+      "indent": ["off"],
+      "@typescript-eslint/no-empty-function": ["error"]
+
+    },
+    "env": {
+      "browser": true,
+      "es6": true
+    },
+    "extends": [
+      "standard",
+      "eslint:recommended",
+      "plugin:@typescript-eslint/eslint-recommended",
+      "plugin:@typescript-eslint/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "ecmaVersion": 2018,
+      "sourceType": "module"
+    },
+    "plugins": ["prettier", "@typescript-eslint"]
+  }
