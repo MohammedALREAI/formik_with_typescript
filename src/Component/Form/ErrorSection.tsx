@@ -9,7 +9,6 @@ interface Props {
 }
 
 export const ErrorSection = (props: Props) => {
-    console.log('test', props.touched, props.errors)
     if (props.touched && props.errors) {
         return (
             <div className="flex justify-between items-center pt-1 text-red-400">

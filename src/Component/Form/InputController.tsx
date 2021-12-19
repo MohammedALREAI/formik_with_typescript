@@ -8,7 +8,7 @@ interface InputControllerProps {
     type?: string;
     errors?: string;
     defaultValue?: string;
-    value?: string;
+    value?: string | number;
     touched?: boolean;
     placeholder?: string;
     icon?: ReactNode;
@@ -34,7 +34,7 @@ export const InputController = (props: InputControllerProps) => {
                     id={props.name}
                     name={props.name}
                     onBlur={props.onBlur}
-                    required
+                    // required
                     className="pl-3 py-3 w-full text-sm focus:outline-none placeholder-gray-500 rounded bg-transparent text-gray-500 dark:text-gray-400"
                     placeholder={props.placeholder}
                 />

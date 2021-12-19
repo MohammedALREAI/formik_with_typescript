@@ -1,18 +1,18 @@
 import * as Yup from 'yup'
-import { company, jobField, jobFieldValidation, jobLocation, jobTitle, jobTitleValidation } from './listCont'
+// import { company, jobField, jobFieldValidation, jobLocation, jobTitle, jobTitleValidation } from './listCont'
 
-const validjobTitleValues = jobTitle.map(({ value }) => value)
-const validjobFieldValues = jobField.map(({ value }) => value)
-const validjobLocationValues = jobField.map(({ value }) => value)
+// const validjobTitleValues = jobTitle.map(({ value }) => value)
+// const validjobFieldValues = jobField.map(({ value }) => value)
+// const validjobLocationValues = jobField.map(({ value }) => value)
 
 export interface IExperince{
   title:string
   field:string
   location:string
-  currently:boolean
+  currently?:boolean
   description:string
   startDate:Date,
-  endDate?: Date | any
+  endDate?: Date
   name:string
   address:string
   industry:string
@@ -22,14 +22,13 @@ export interface IExperince{
   supervisorEmployer:string
   supervisorLevee:string
   startSalary:number
-  endSalary:string
+  endSalary:number
   currency:string
 }
 
 
-
-
-export const validationSchema = Yup.object().shape({
+export const validationSchema = (): Yup.SchemaOf<IExperince> => {
+  return Yup.object().shape({
         title: Yup.string().required('should  be  select  on title'),
         field: Yup.string().required('should  be  select  on field'),
         location: Yup.string().required('should  be  select  on Loacation'),
@@ -59,6 +58,7 @@ export const validationSchema = Yup.object().shape({
         endSalary: Yup.number().min(700, 'end Salary more  than  700').required('end Salary is required'),
         currency: Yup.string().required('should  be  select  on title'),
 })
+}
 
 
 export type TValidationSchema = Yup.SchemaOf< typeof validationSchema>
