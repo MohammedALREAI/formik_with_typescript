@@ -101,7 +101,7 @@ const CaretDownIcon = () => {
     return (
         <div className="container  mx-auto my-4">
             <Select
-                    closeMenuOnSelect={false}
+                    // closeMenuOnSelect={false}
 
                 className="basic-single"
                 isSearchable={true}

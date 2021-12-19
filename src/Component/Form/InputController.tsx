@@ -1,6 +1,6 @@
 import React, { ChangeEvent, ReactNode } from 'react'
 import { ErrorSection } from './ErrorSection'
-import { Field } from 'formik'
+// import { Field } from 'formik'
 
 interface InputControllerProps {
     name?: string;
@@ -34,7 +34,7 @@ export const InputController = (props: InputControllerProps) => {
                     id={props.name}
                     name={props.name}
                     onBlur={props.onBlur}
-                    // required
+                    required
                     className="pl-3 py-3 w-full text-sm focus:outline-none placeholder-gray-500 rounded bg-transparent text-gray-500 dark:text-gray-400"
                     placeholder={props.placeholder}
                 />

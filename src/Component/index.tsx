@@ -26,7 +26,8 @@ export const IndexForm = () => {
 
 
     const initialValues:IExperince = {
-        title: isEditable ? editValue.title : '',
+        // title: isEditable ? editValue.title : '',
+        title: '',
         field: isEditable ? editValue.field : '',
         location: isEditable ? editValue.location : '',
         startDate: isEditable ? editValue.startDate : new Date(),
@@ -61,7 +62,7 @@ const dispatch = useDispatch()
 
     useEffect(() => {
         console.log('test')
-    }, [dispatch, isEditable, setEditValue, editValue])
+    }, [dispatch])
 
             const handleUpdate = (id:string, values:IExperince) => {
                 setIsEditable(true)
@@ -69,7 +70,7 @@ const dispatch = useDispatch()
 
                 dispatch(allActionExperience.editExperience(id, values))
                 console.log('edit  value ______2', editValue)
-                setIsEditable(false)
+                // setIsEditable(false)
             }
 
     return (
